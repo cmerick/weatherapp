@@ -1,16 +1,16 @@
 import axios from "axios"
 
-const apiKey = "2d515e7d043de5afcca3f693824b6475"
-
 export const api = axios.create({
-    baseURL: "https://api.openweathermap.org/data/2.5/weather?"
+    baseURL: "https://api.open-meteo.com/v1"
 })
 
-export const cityweather = async (cityName:string) => {
+export const cityWeatherNow = async (lat: string, lon: string) => {
+    //const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     try{
-        const response = await api.get(`q=${cityName}&appid=${apiKey}`);
+        const response = await api.get(`/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&timeformat=unixtime`);
         console.log(response.data);
     }catch(error){
+        console.log((error as Error).message)
         throw error;
     }
 }
