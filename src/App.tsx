@@ -1,13 +1,6 @@
-import { cityWeatherNow } from "./services/api";
+import Home from "./pages/home";
 function App() {
-  return (
-    <div>
-      <h1>hello world</h1>
-      <button onClick={() => cityWeatherNow("-23.21", "-46.78")}>
-        Clique aqui
-      </button>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
