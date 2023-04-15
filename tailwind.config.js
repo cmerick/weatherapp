@@ -21,6 +21,15 @@ module.exports = {
       warning: "#F7B02B",
 
       error: "#E75A89",
+
+      glass: "rgba( 255, 255, 255, 0.25 );",
+    },
+    backgroundImage: {
+      night:
+        "linear-gradient(180deg, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 82%, rgba(0,212,255,1) 100%);",
+    },
+    height: {
+      full: "100vh",
     },
     extend: {},
   },
